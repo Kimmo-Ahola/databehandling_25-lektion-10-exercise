@@ -1,32 +1,40 @@
 import pytest
 from services.validator_service import Validator
 
+"""
+Since Validator is static we do not need a setup or teardown between tests
+
+"""
+
+
 def test_invalid_email():
     # Arrange
     # This is a bad email because it does not contain @ or end in .com or .se
     bad_email = "abcsd"
-    
+
     # Act
     # We test our validator and get a result
     result = Validator.is_valid_email(bad_email)
-    
+
     # Assert
     # We check that the result is correct
     assert result == False
+
 
 def test_valid_email():
     # Arrange
     # This is a correct email because it has something before @ and ends in .com
     # No special characters
     bad_email = "kimmo@email.com"
-    
+
     # Act
     # We test our validator and get a result
     result = Validator.is_valid_email(bad_email)
-    
+
     # Assert
     # We check that the result is correct
     assert result == True
+
 
 """
 Write more tests for emails:
@@ -46,7 +54,6 @@ Invalid emails:
 totallyvalidemail.se
 kimmo+ahola@test.se - no plus in the email
 """
-
 
 
 """

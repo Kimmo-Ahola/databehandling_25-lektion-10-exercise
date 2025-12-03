@@ -34,7 +34,7 @@ medan detta är en ogiltig epost:
 @example.com
 
 3. Datumvalidering: hotellet måste hantera datum för bokningar.
-- valideringen bör ta in datumen som strängar enligt "YYYY-MM-DD". Det finns inbyggt i python. Se validate_dates för att se hur den funkar.
+- Valideringen bör ta in datumen som strängar enligt "YYYY-MM-DD". Det finns inbyggt i python. Se validate_dates för att se hur den funkar.
 - Startdatum måste vara minst en dag i framtiden
 - Slutdatum måste vara minst en dag efter startdatum
 
