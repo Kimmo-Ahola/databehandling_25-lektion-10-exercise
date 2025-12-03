@@ -1,14 +1,17 @@
 from services.validator_service import Validator
 
-class Customer():
+
+class Customer:
     def __init__(self, first_name: str, last_name: str, email: str) -> None:
         self.first_name: str = first_name
         self.last_name: str = last_name
         self.email: str = email
 
-class CustomerService():
+
+class CustomerService:
     def get_valid_email(self) -> str | None:
         while True:
+            print("Det är bra att skriva ut reglerna för vad som gäller för en email")
             email: str = input("Ange en e-post (q to quit): ")
             if email == "q":
                 return None
@@ -19,6 +22,9 @@ class CustomerService():
 
     def get_valid_first_name(self) -> str | None:
         while True:
+            print(
+                "Det är bra att skriva ut reglerna för vad som gäller för ett förnamn: minst 2 tecken, inga specialtecken, inga mellanrum etc. Era regler gäller!"
+            )
             name: str = input("Ange ett förnamn (q to quit): ")
             if name == "q":
                 return None
@@ -29,6 +35,9 @@ class CustomerService():
 
     def get_valid_last_name(self) -> str | None:
         while True:
+            print(
+                "Det är bra att skriva ut reglerna för vad som gäller för ett efternamn: minst 2 tecken, inga specialtecken, inga mellanrum etc. Era regler gäller!"
+            )
             name: str = input("Ange ett efternamn (q to quit): ")
             if name == "q":
                 return None
